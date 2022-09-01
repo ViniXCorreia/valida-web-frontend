@@ -39,7 +39,11 @@ export class RelatoriosComponent {
         me.propostas = data;
       },
       (err) => {
-        this.swalService.error('Cliente não encontrado', '', 'Ok');
+        this.swalService.error(
+          'Cliente não encontrado',
+          err.error.message,
+          'Ok'
+        );
       }
     );
   }
